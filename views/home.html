@@ -1,7 +1,17 @@
 <div ng-controller="HomeController" class="row">
-	<div class="col-sm-12">
-	  	<p>
-	    	{{message}}
-		</p>
+	<div class="col-sm-2">
+		<div class="name">
+			Metric
+		</div>
+		<div class="metric" ng-repeat="metric in Metrics">
+			{{metric.name}}
+		</div>
+
+	</div>
+	<div class="col-sm-2" ng-repeat="student in students">
+		<div class="name">
+			{{student.name}}
+		</div>
+		<div ng-repeat="studentMetric in student.metrics"><span class="sub" ng-click="subtractProgress(student.id, studentMetric.id)" ng-hide="studentMetric.progress === 0">-</span>{{studentMetric.progress}}/{{Metrics[studentMetric.id].progressGoal}}<span class="add" ng-click="addProgress(student.id, studentMetric.id)" ng-hide="studentMetric.progress === Metrics[studentMetric.id].progressGoal">+</span></span>
 	</div>
 </div>

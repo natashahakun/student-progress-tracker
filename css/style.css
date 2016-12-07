@@ -9553,7 +9553,7 @@ button.close {
 /* line 1, _base.scss */
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 1.2em;
   background-color: #fafafa;
   color: #444444;
   /*sticky footer*/
@@ -9576,4 +9576,30 @@ a:hover {
 /* line 21, _base.scss */
 a:active {
   text-decoration: underline;
+}
+
+/* line 26, _base.scss */
+.name {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+/* line 31, _base.scss */
+.metric {
+  font-size: 1.2em;
+  margin: 13px;
+}
+
+/* line 36, _base.scss */
+.sub, .add {
+  margin: 10px;
+  color: darkred;
+  font-weight: bold;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* line 44, _base.scss */
+.add {
+  color: darkgreen;
 }
